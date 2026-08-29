@@ -1,6 +1,6 @@
 'use client';
 
-import { progressManager } from '@/lib/user-progress';
+import { progressManager } from '@/lib/progress/user-progress';
 import { useEffect, useState } from 'react';
 
 interface Stats {

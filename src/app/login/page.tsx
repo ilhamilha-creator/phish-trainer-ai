@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { authManager } from '@/lib/auth';
+import { authManager } from '@/lib/auth/auth';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
@@ -37,7 +37,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/images/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
 
@@ -45,7 +45,7 @@ export default function LoginPage() {
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-slate-700/50">
           <div className="text-center mb-8">
             <div className="mb-6 animate-bounce">
-              <img src="/logo.jpg" alt="PhishTrainer AI Logo" className="w-24 h-24 mx-auto rounded-2xl shadow-2xl" />
+              <img src="/images/logo.jpg" alt="PhishTrainer AI Logo" className="w-24 h-24 mx-auto rounded-2xl shadow-2xl" />
             </div>
             <h1 className="text-4xl font-bold text-white mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               {isLogin ? 'Welcome Back' : 'Join PhishTrainer'}

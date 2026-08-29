@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { progressManager, ScenarioResult } from '@/lib/user-progress';
+import { progressManager } from '@/lib/progress/user-progress';
+import { ScenarioResult } from '@/types';
 
 export async function GET(request: NextRequest) {
   const stats = progressManager.getStats();

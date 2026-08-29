@@ -1,15 +1,6 @@
-export interface AIPhishingScenario {
-  type: 'email' | 'sms' | 'link' | 'email_pro' | 'sms_banque' | 'social_network';
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-  category: 'credential_harvesting' | 'malware' | 'social_engineering' | 'business_email_compromise';
-  userLevel: number;
-  userSkillLevels: {
-    credential_harvesting: number;
-    malware: number;
-    social_engineering: number;
-    business_email_compromise: number;
-  };
-}
+import { AIPhishingScenario } from '@/types';
+
+export type { AIPhishingScenario };
 
 export function generatePhishingPrompt(params: AIPhishingScenario): string {
   const { type, difficulty, category, userLevel, userSkillLevels } = params;

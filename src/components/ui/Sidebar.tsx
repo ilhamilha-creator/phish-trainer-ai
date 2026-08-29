@@ -35,7 +35,7 @@ export default function Sidebar({ activeTab, onTabChange, onCollapsedChange }: S
         <div className="p-6 border-b border-slate-700/50">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-blue-500/20">
-              <img src="/logo.jpg" alt="PhishTrainer AI Logo" className="w-full h-full object-cover" />
+              <img src="/images/logo.jpg" alt="PhishTrainer AI Logo" className="w-full h-full object-cover" />
             </div>
             {!isCollapsed && (
               <div>

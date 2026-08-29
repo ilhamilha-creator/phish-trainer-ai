@@ -1,14 +1,4 @@
-export interface PhishingScenario {
-  id: string;
-  type: 'email' | 'sms' | 'link' | 'email_pro' | 'sms_banque' | 'social_network';
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-  title: string;
-  content: string;
-  isPhishing: boolean;
-  indicators: string[];
-  explanation: string;
-  category: 'credential_harvesting' | 'malware' | 'social_engineering' | 'business_email_compromise';
-}
+import { PhishingScenario } from '@/types';
 
 export const phishingScenarios: PhishingScenario[] = [
   {

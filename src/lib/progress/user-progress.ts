@@ -1,30 +1,4 @@
-export interface UserProgress {
-  userId: string;
-  currentLevel: number;
-  xp: number;
-  streak: number;
-  totalCompleted: number;
-  correctAnswers: number;
-  wrongAnswers: number;
-  skillLevels: {
-    credential_harvesting: number;
-    malware: number;
-    social_engineering: number;
-    business_email_compromise: number;
-  };
-  completedScenarios: string[];
-  currentDifficulty: 'beginner' | 'intermediate' | 'advanced';
-  lastActivity: Date;
-}
-
-export interface ScenarioResult {
-  scenarioId: string;
-  userAnswer: boolean;
-  correct: boolean;
-  timeTaken: number;
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-  category: 'credential_harvesting' | 'malware' | 'social_engineering' | 'business_email_compromise';
-}
+import { UserProgress, ScenarioResult } from '@/types';
 
 const INITIAL_PROGRESS: UserProgress = {
   userId: 'default',

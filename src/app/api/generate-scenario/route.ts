@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generatePhishingPrompt, generateLegitimatePrompt, AIPhishingScenario } from '@/lib/ai-prompts';
+import { generatePhishingPrompt, generateLegitimatePrompt, AIPhishingScenario } from '@/lib/ai/ai-prompts';
 
 export async function POST(request: NextRequest) {
   try {

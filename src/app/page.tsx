@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Dashboard from '@/components/Dashboard';
-import TrainingInterface from '@/components/TrainingInterface';
-import Leaderboard from '@/components/Leaderboard';
-import Sidebar from '@/components/Sidebar';
-import { authManager } from '@/lib/auth';
+import Dashboard from '@/components/features/Dashboard';
+import TrainingInterface from '@/components/features/TrainingInterface';
+import Leaderboard from '@/components/features/Leaderboard';
+import Sidebar from '@/components/ui/Sidebar';
+import { authManager } from '@/lib/auth/auth';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'training' | 'dashboard' | 'leaderboard'>('training');
@@ -23,13 +23,13 @@ export default function Home() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/images/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
 
         <div className="text-center relative z-10">
           <div className="mb-6 animate-bounce">
-            <img src="/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
+            <img src="/images/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
           </div>
           <h1 className="text-5xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             PhishTrainer AI
@@ -47,7 +47,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="min-h-screen flex relative overflow-hidden" style={{ backgroundImage: 'url(/images/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm"></div>
 

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { PhishingScenario } from '@/lib/phishing-data';
-import { progressManager, ScenarioResult } from '@/lib/user-progress';
+import { PhishingScenario, ScenarioResult } from '@/types';
+import { progressManager } from '@/lib/progress/user-progress';
 
 type GameState = 'intro' | 'question' | 'feedback' | 'complete' | 'loading';
 
@@ -62,7 +62,7 @@ export default function TrainingInterface() {
     } catch (error) {
       console.error('Error generating scenario:', error);
       // Fallback to static scenario if AI fails
-      const { getRandomScenario } = await import('@/lib/phishing-data');
+      const { getRandomScenario } = await import('@/lib/data/phishing-data');
       const fallbackScenario = getRandomScenario(progress.currentDifficulty);
       setCurrentScenario(fallbackScenario);
       setGameState('question');
@@ -149,7 +149,7 @@ export default function TrainingInterface() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <div className="mb-6 animate-bounce">
-            <img src="/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
+            <img src="/images/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
           </div>
           <h1 className="text-5xl font-bold text-white mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             PhishTrainer AI

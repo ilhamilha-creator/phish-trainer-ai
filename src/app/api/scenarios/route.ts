@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { phishingScenarios, getRandomScenario, getScenariosByDifficulty } from '@/lib/phishing-data';
+import { phishingScenarios, getRandomScenario, getScenariosByDifficulty } from '@/lib/data/phishing-data';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;

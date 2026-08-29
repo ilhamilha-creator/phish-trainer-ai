@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Leaderboard from '@/components/Leaderboard';
-import { authManager } from '@/lib/auth';
+import Leaderboard from '@/components/features/Leaderboard';
+import { authManager } from '@/lib/auth/auth';
 
 export default function LeaderboardPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -13,11 +13,11 @@ export default function LeaderboardPage() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" style={{ backgroundImage: 'url(/images/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
         <div className="text-center relative z-10">
           <div className="mb-6 animate-bounce">
-            <img src="/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
+            <img src="/images/logo.jpg" alt="PhishTrainer AI Logo" className="w-32 h-32 mx-auto rounded-2xl shadow-2xl" />
           </div>
           <h1 className="text-5xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             PhishTrainer AI
@@ -35,7 +35,7 @@ export default function LeaderboardPage() {
   }
 
   return (
-    <div className="min-h-screen flex relative overflow-hidden" style={{ backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <div className="min-h-screen flex relative overflow-hidden" style={{ backgroundImage: 'url(/images/background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-sm"></div>
       <div className="relative z-10 w-full p-8">
         <div className="max-w-7xl mx-auto">

@@ -1,40 +1,40 @@
 # 🎣 PhishTrainer AI
 
-Un générateur de simulations de phishing adaptatif propulsé par l'IA, façon Duolingo de la cybersécurité. L'IA crée dynamiquement des emails, SMS et liens réalistes pour vous entraîner à détecter les tentatives de phishing.
+An AI-powered adaptive phishing simulation generator, the Duolingo of cybersecurity. AI dynamically creates realistic emails, SMS, and links to train you to detect phishing attempts.
 
-## 🚀 Fonctionnalités
+## 🚀 Features
 
-### 🤖 Génération IA Dynamique
-- **Scénarios uniques** : Chaque session génère de nouveaux scénarios de phishing via GPT-4
-- **Adaptation en temps réel** : L'IA ajuste la complexité selon votre niveau et vos compétences
-- **Contenu réaliste** : Emails, SMS et liens personnalisés et crédibles
-- **Fallback intelligent** : Système de secours avec scénarios statiques si l'IA est indisponible
+### 🤖 Dynamic AI Generation
+- **Unique scenarios**: Each session generates new phishing scenarios via AI
+- **Real-time adaptation**: AI adjusts complexity based on your level and skills
+- **Realistic content**: Personalized and credible emails, SMS, and links
+- **Smart fallback**: Static scenario backup system if AI is unavailable
 
-### 🎮 Gamification Complète
-- **Système adaptatif** : La difficulté s'ajuste automatiquement selon vos performances
-- **XP et niveaux** : Gagnez des points et progressez dans votre apprentissage
-- **Streaks** : Maintenez une série d'activités quotidiennes
-- **Compétences par catégorie** : Suivez votre progression dans chaque type de phishing
+### 🎮 Complete Gamification
+- **Adaptive system**: Difficulty automatically adjusts based on your performance
+- **XP and levels**: Earn points and progress in your learning
+- **Streaks**: Maintain a daily activity streak
+- **Category skills**: Track your progress in each phishing type
 
-### 📊 Statistiques Avancées
-- **Tableau de bord détaillé** : Visualisez votre progression et vos statistiques
-- **Compétences par catégorie** : Credential harvesting, malware, social engineering, BEC
-- **Leaderboard** : Comparez vos performances avec d'autres utilisateurs
-- **Historique** : Suivez votre évolution au fil du temps
+### 📊 Advanced Statistics
+- **Detailed dashboard**: Visualize your progress and statistics
+- **Category skills**: Credential harvesting, malware, social engineering, BEC
+- **Leaderboard**: Compare your performance with other users
+- **History**: Track your evolution over time
 
-### 🔐 Sécurité et Authentification
-- **Système d'authentification** : Créez un compte pour sauvegarder votre progression
-- **Persistance des données** : Vos progrès sont sauvegardés automatiquement
-- **Interface sécurisée** : Design moderne et intuitive
+### 🔐 Security and Authentication
+- **Authentication system**: Create an account to save your progress
+- **Data persistence**: Your progress is automatically saved
+- **Secure interface**: Modern and intuitive design
 
 ## 🛠️ Technologies
 
-- **Next.js 15** - Framework React avec App Router
+- **Next.js 16** - React framework with App Router
 - **TypeScript** - Type safety
-- **Tailwind CSS** - Styling moderne
-- **React Hooks** - Gestion d'état locale
-- **LocalStorage** - Persistance des données utilisateur
-- **AI Integration Ready** - Support for OpenAI, Groq, Hugging Face, Ollama (optional)
+- **Tailwind CSS** - Modern styling
+- **React Hooks** - Local state management
+- **LocalStorage** - User data persistence
+- **AI Integration Ready** - Support for Groq, OpenAI, Hugging Face, Ollama (optional)
 
 ## 📦 Installation
 
@@ -54,99 +54,103 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 **Note:** The app works immediately with static phishing scenarios. AI-powered dynamic generation is optional and requires additional setup.
 
-## 🎮 Comment ça marche
+## 🎮 How it works
 
-1. **Créez un compte** : Inscrivez-vous pour sauvegarder votre progression
-2. **Analysez le scénario** : Examinez l'email, SMS ou lien présenté
-3. **Prenez une décision** : Déterminez si c'est légitime ou du phishing
-4. **Apprenez** : Recevez un feedback instantané avec les indicateurs clés
-5. **Progresssez** : Le système ajuste la difficulté selon vos performances
+1. **Create an account**: Sign up to save your progress
+2. **Analyze the scenario**: Examine the email, SMS, or link presented
+3. **Make a decision**: Determine if it's legitimate or phishing
+4. **Learn**: Receive instant feedback with key indicators
+5. **Progress**: The system adjusts difficulty based on your performance
 
 ## 🤖 AI Generation (Optional)
 
 The app supports dynamic AI-powered scenario generation. To enable:
 
-**Option 1: OpenAI (Paid)**
+**Option 1: Groq (Recommended, Free)**
+- Get API key from [console.groq.com](https://console.groq.com/)
+- Set `GROQ_API_KEY` in `.env`
+
+**Option 2: OpenAI (Paid)**
 - Get API key from [platform.openai.com](https://platform.openai.com/api-keys)
 - Set `OPENAI_API_KEY` in `.env`
 
-**Option 2: Ollama (Free, Local)**
+**Option 3: Ollama (Free, Local)**
 - Install Ollama from [ollama.com](https://ollama.com/download)
 - Run `ollama pull llama3.1`
 - Set `OLLAMA_BASE_URL=http://localhost:11434/v1` and `OLLAMA_MODEL=llama3.1` in `.env`
 
-**Option 3: Hugging Face (Free)**
+**Option 4: Hugging Face (Free)**
 - Get API key from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
 - Set `HUGGINGFACE_API_KEY` in `.env`
 
-## 📊 Système de progression
+## 📊 Progression System
 
-- **XP** : Gagnez des points selon la difficulté et votre rapidité
-- **Niveaux** : Montez de niveau en accumulant de l'XP
-- **Streak** : Maintenez une série d'activités quotidiennes
-- **Compétences** : Suivez votre progression par catégorie de phishing
-- **Difficulté adaptative** : Le système ajuste la difficulté selon vos performances
+- **XP**: Earn points based on difficulty and speed
+- **Levels**: Level up by accumulating XP
+- **Streak**: Maintain a daily activity streak
+- **Skills**: Track your progress by phishing category
+- **Adaptive difficulty**: System adjusts difficulty based on your performance
 
-## 🎯 Catégories de phishing
+## 🎯 Phishing Categories
 
-- **Credential Harvesting** : Tentatives de vol d'identifiants
-- **Malware** : Distribution de logiciels malveillants
-- **Social Engineering** : Manipulation psychologique
-- **Business Email Compromise** : Impersonnalisation d'entreprises
+- **Credential Harvesting**: Attempts to steal login credentials
+- **Malware**: Distribution of malicious software
+- **Social Engineering**: Psychological manipulation
+- **Business Email Compromise**: Impersonation of companies
 
-## 🏗️ Structure du projet
+## 🏗️ Project Structure
 
 ```
 src/
 ├── app/
-│   ├── page.tsx          # Page principale avec navigation
-│   ├── layout.tsx        # Layout global
-│   └── globals.css       # Styles globaux
+│   ├── page.tsx          # Main page with navigation
+│   ├── layout.tsx        # Global layout
+│   └── globals.css       # Global styles
 ├── components/
-│   ├── Dashboard.tsx     # Tableau de bord statistiques
-│   └── TrainingInterface.tsx  # Interface d'entraînement
+│   ├── Dashboard.tsx     # Statistics dashboard
+│   └── TrainingInterface.tsx  # Training interface
 └── lib/
-    ├── phishing-data.ts  # Base de données des scénarios
-    └── user-progress.ts # Gestion de la progression utilisateur
+    ├── phishing-data.ts  # Scenario database
+    └── user-progress.ts # User progress management
 ```
 
-## 🔧 Personnalisation
+## 🔧 Customization
 
-### Ajouter de nouveaux scénarios
+### Add new scenarios
 
-Éditez `src/lib/phishing-data.ts` et ajoutez des objets `PhishingScenario` :
+Edit `src/lib/phishing-data.ts` and add `PhishingScenario` objects:
 
 ```typescript
 {
   id: 'unique-id',
   type: 'email' | 'sms' | 'link',
   difficulty: 'beginner' | 'intermediate' | 'advanced',
-  title: 'Titre du scénario',
-  content: 'Contenu du message',
+  title: 'Scenario title',
+  content: 'Message content',
   isPhishing: true,
-  indicators: ['Indicateur 1', 'Indicateur 2'],
-  explanation: 'Explication détaillée',
+  indicators: ['Indicator 1', 'Indicator 2'],
+  explanation: 'Detailed explanation',
   category: 'credential_harvesting' | 'malware' | 'social_engineering' | 'business_email_compromise'
 }
 ```
 
-### Ajuster la difficulté
+### Adjust difficulty
 
-Modifiez la logique dans `src/lib/user-progress.ts` dans la méthode `updateDifficulty()`.
+Modify the logic in `src/lib/user-progress.ts` in the `updateDifficulty()` method.
 
-## 🚀 Déploiement
+## 🚀 Deployment
 
-### Vercel (recommandé)
+### Vercel (recommended)
 
 ```bash
 npm run build
 ```
 
-Puis connectez votre repository à Vercel pour un déploiement automatique.
+Then connect your repository to Vercel for automatic deployment.
 
-### Autres plateformes
+### Other platforms
 
-Ce projet peut être déployé sur n'importe quelle plateforme supportant Next.js :
+This project can be deployed on any platform supporting Next.js:
 - Netlify
 - Railway
 - Render
@@ -154,12 +158,12 @@ Ce projet peut être déployé sur n'importe quelle plateforme supportant Next.j
 
 ## 📝 License
 
-Ce projet est créé à des fins éducatives pour aider les utilisateurs à reconnaître les tentatives de phishing.
+This project is created for educational purposes to help users recognize phishing attempts.
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! N'hésitez pas à :
-- Ajouter de nouveaux scénarios de phishing
-- Améliorer l'interface utilisateur
-- Corriger les bugs
-- Suggérer de nouvelles fonctionnalités
+Contributions are welcome! Feel free to:
+- Add new phishing scenarios
+- Improve the user interface
+- Fix bugs
+- Suggest new features
